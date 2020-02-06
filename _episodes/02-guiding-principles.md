@@ -18,7 +18,7 @@ Raw data is that which is untouched. It is the file that comes from the instrume
 entered. It does not contain formatting, italics, bold titles, calculations or plots. This is the point at which you start, and to which you should always
 be able to return. Make backups, protect it at all costs, and as soon as you start to work on it, save your consequent work as a new file.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/01-poor_raw_data.png "What raw data does *not* look like")
+![alt text](../fig/01-poor_raw_data.png "What raw data does *not* look like")
 
 
 #### Create a data dictionary
@@ -28,7 +28,7 @@ projects using basic project organisation principles, such as having a README.tx
 reproducibility of a spreadsheet file is to have a tab or separate spreadsheet file that contains variable names and associated details. For example,
 it may list all variable names, their units, maximum and minimum values, internet references to find out more, etc.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/02-data-dictionary.png "A simple data dictionary example")
+![alt text](../fig/02-data-dictionary.png "A simple data dictionary example")
 
 
 #### Consistency and sensible names
@@ -46,7 +46,7 @@ would be 'CRP_mg.ml', avoiding characters like brackets and slashes.
 Never underestimate the importance of everyone being on the same page with units. In 1999, NASA and Lockheed Martin used different units on the same 
 aspect of a particular project, leading to the [destruction of the $125 million Mars Climate Orbiter](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter).
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/03-poor-names.png "Poor variable names")
+![alt text](../fig/03-poor-names.png "Poor variable names")
 
 
 
@@ -84,7 +84,7 @@ have to split the column. It's far easier to use two different columns from the 
 Merging cells is a similar issue. Merging multiple cells into a single cell may look good, but it does nothing for subsequent processing. For example,
 as soon as you save your file as a CSV, the merging is lost and you end up with an empty cell.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/04-poor-columns.png "Poor use of columns")
+![alt text](../fig/04-poor-columns.png "Poor use of columns")
 
 
 #### Rectangular data
@@ -96,7 +96,7 @@ If your data contains multiple parts, each of which is or can be structured in t
 better, each into a separate file. The latter may seem overly complicated, and may not always be necessary, but recall that CSV files cannot save
 multiple tabs.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/05-non_rectangular.png "Non-rectangular data")
+![alt text](../fig/05-non_rectangular.png "Non-rectangular data")
 
 
 #### Avoid colour
@@ -110,7 +110,7 @@ It is far more useful to create new columns that contain the details of whatever
 using colours to highlight 'high' and 'low' values of some numeric column, instead create a column called, say, 'Value category', with the values
 of 'high', 'low' and 'normal' in the cells.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/06-poor-colour.png "Colour overload")
+![alt text](../fig/06-poor-colour.png "Colour overload")
 
 
 #### Validation techniques
@@ -123,7 +123,7 @@ but if you're manually entering data, that time could save you from costly mista
 Modern spreadsheet programs often have data validation tools. For example, in Excel, select a column, then click the 'data validation' option from the 'data' tab. Click 'Allow' and select 
 'Whole number'. For 'Minimum' and 'Maximum', enter 0 and 10, respectively. Click OK. Now, try to enter anything that isn't a whole number between those ranges.
 
-![alt text](https://github.com/RobHarrand/life-sciences-spreadsheet-best-practice/blob/gh-pages/fig/07-data-validation.png "Data validation")
+![alt text](../fig/07-data-validation.png "Data validation")
 
 
 #### How to save
@@ -143,50 +143,51 @@ these changes as an Excel file (for example), *but save the consequent, improved
 whilst the details of the changes are retained.
 
 
-#### Exercise - Spreadsheet example
+> #### Exercise - Spreadsheet example
+> 
+> 1. Load the file 'manual-data-example-01.xlsx'. Pick out as many aspects of this file that may hinder reproducibility
+> 2. Go to 'File', 'Save as' and create a copy of the file. Save this with an appropriate name (as an Excel file or similar). Make as many changes as you can to 
+> this file, adhering to the principles above. There is no single right answer to this. The aim is to improve the file, not necessarily make
+> it perfect.
 
-1. Load the file 'manual-data-example-01.xlsx'. Pick out as many aspects of this file that may hinder reproducibility
-2. Go to 'File', 'Save as' and create a copy of the file. Save this with an appropriate name (as an Excel file or similar). Make as many changes as you can to 
-this file, adhering to the principles above. There is no single right answer to this. The aim is to improve the file, not necessarily make
-it perfect.
-
-Note, the aim of this is not to get the data ready for coding. This exercise assumes that you will only use a spreadsheet, so feel free to retain
-some formatting, formulae, etc. The aim is to enhance the reproducibility of the file, in other words, to enable someone else (or yourself at some future
-point) to use the file efficiently and without error.
-
-#### Solution
-
-1) Ask the question: What is the aim of this file? Is it to produce a plot? A neater, more useable version of the data? To explore the data?
-Let's assume the point of this file is to find the out-of-range samples
-1) Delete the 'raw' tab as it's already in a file in the same directory
-2) Create a README.txt file, explaining what the Excel file, raw data file and analysed data file are. Added the info from the 'misc' tab
-3) Delete the 'data', 'stuff' and 'misc' tabs
-4) Create tabs for plate 1 and plate 2
-5) Delete the 'PLATE 1' and 'PLATE 2' rows at the top of each tab
-6) Create a 'Standards' tab and tidy up the plot
-7) Could arguably keep the heatmap. It's fine as it's not aiming to classify the data, it's purely a visual tool. That said, does it help the aim
-of finding out-of-range values? Not when that's defined as a CV above a certain value. If the heatmap is to spot, say, some other out-of-range value
-that may indicate an experimental issue, is a visual aid a good method for reproducibility? Does that lead down the road of the subjective "Hmmm, that
-looks a bit high". Better would be to create a new
-8) Delete the '405' column next to the plate data
-9) Tidy up the column headers for the bottom section
-10) Move the bottom section to the side so you can adjust the column widths appropriately
-11) Removed the text about absorbance, as it may hinder sorting. Less info, but covered in the README.txt file
-11) Remove the conditional formatting for the 'CV' column and create a new one called 'High value', with 'yes' and 'no' accordingly. Used
-=IF(CELL>0.072, "Yes", "No")
-12) Use the same header info ('rep1' etc rather than 'a' etc)
-13) Corrected 'rep 4' and 'd' to 'Average' (look at the formula)
-13) Set both sets to 5 decimal places
-14) Added 'note' column. Added a useful note and removed colour
-15) Added 'na' to blank columns in plate 1 data
-16) Added a 'plate definition' tab
-17) Changed references to 'values' to allow sorting
-18) Corrected 'Average' formula as references broke after the above action
-18) Unified font and removed horizontal lines
-19) Copied the data into a new 'Results' tab, values only (no references), create a new 'plate' column, unified formatting. Ordered by high value
-
-Note: This cleaned 'Results' tab data could be saved as a CSV file for consequent work. If so, ensure the file is described accordingly in the 
-README.txt file.
+> Note, the aim of this is not to get the data ready for coding. This exercise assumes that you will only use a spreadsheet, so feel free to retain
+> some formatting, formulae, etc. The aim is to enhance the reproducibility of the file, in other words, to enable someone else (or yourself at some future
+> point) to use the file efficiently and without error.
+> 
+> > #### Solution
+> > 
+> > 1) Ask the question: What is the aim of this file? Is it to produce a plot? A neater, more useable version of the data? To explore the data?
+> > Let's assume the point of this file is to find the out-of-range samples
+> > 1) Delete the 'raw' tab as it's already in a file in the same directory
+> > 2) Create a README.txt file, explaining what the Excel file, raw data file and analysed data file are. Added the info from the 'misc' tab
+> > 3) Delete the 'data', 'stuff' and 'misc' tabs
+> > 4) Create tabs for plate 1 and plate 2
+> > 5) Delete the 'PLATE 1' and 'PLATE 2' rows at the top of each tab
+> > 6) Create a 'Standards' tab and tidy up the plot
+> > 7) Could arguably keep the heatmap. It's fine as it's not aiming to classify the data, it's purely a visual tool. That said, does it help the aim
+> > of finding out-of-range values? Not when that's defined as a CV above a certain value. If the heatmap is to spot, say, some other out-of-range value
+> > that may indicate an experimental issue, is a visual aid a good method for reproducibility? Does that lead down the road of the subjective "Hmmm, that
+> > looks a bit high". Better would be to create a new
+> > 8) Delete the '405' column next to the plate data
+> > 9) Tidy up the column headers for the bottom section
+> > 10) Move the bottom section to the side so you can adjust the column widths appropriately
+> > 11) Removed the text about absorbance, as it may hinder sorting. Less info, but covered in the README.txt file
+> > 11) Remove the conditional formatting for the 'CV' column and create a new one called 'High value', with 'yes' and 'no' accordingly. Used
+> > =IF(CELL>0.072, "Yes", "No")
+> > 12) Use the same header info ('rep1' etc rather than 'a' etc)
+> > 13) Corrected 'rep 4' and 'd' to 'Average' (look at the formula)
+> > 13) Set both sets to 5 decimal places
+> > 14) Added 'note' column. Added a useful note and removed colour
+> > 15) Added 'na' to blank columns in plate 1 data
+> > 16) Added a 'plate definition' tab
+> > 17) Changed references to 'values' to allow sorting
+> > 18) Corrected 'Average' formula as references broke after the above action
+> > 18) Unified font and removed horizontal lines
+> > 19) Copied the data into a new 'Results' tab, values only (no references), create a new 'plate' column, unified formatting. Ordered by high value
+> > 
+> > Note: This cleaned 'Results' tab data could be saved as a CSV file for consequent work. If so, ensure the file is described accordingly in the 
+> > README.txt file
+> > 
 {: .solution}
 {: .challenge}
 

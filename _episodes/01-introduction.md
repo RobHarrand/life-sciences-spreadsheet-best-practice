@@ -29,19 +29,20 @@ be analysed without any consideration of potential spreadsheets dangers. And the
 as a replacement for lab books, with multiple tabs containing data from different experiments gathered on different days, text annotations used for
 ad hoc notes, and entire spreadsheets emailed, opening up all manner of privacy and security issues.
 
-### Exercise - Which of the following scenarios are appropriate for spreadsheets?
-
-1. A dataset of 100 rows of blood markers for 5 people. The aim is to create a simple plot
-2. A dataset of 100 rows of blood markers for 5 people. The aim is to fit advanced statistical models and interpolate new values from those models
-3. A dataset of 1000 rows of blood markers for 20 people. Aim is to create simple plots and create summary statistics (mean, standard deviations, etc)
-4. A dataset of 10k rows of genetic sequencing data. Aim is to pattern-match and extract key sequences
-5. The dataset in example 1, but instead of a single file, you have 100 similar files, i.e. you wish to create 100 plots
-
-### Solution
-1. Yes
-2. Probably not
-3. Yes
-4. Probably not
-5. Probably not
-{: .solution}
+> #### Exercise - Which of the following scenarios are appropriate for spreadsheets?
+> 
+> 1. A dataset of 100 rows of blood markers for 5 people. The aim is to create a simple plot
+> 2. A dataset of 100 rows of blood markers for 5 people. The aim is to fit advanced statistical models and interpolate new values from those models
+> 3. A dataset of 1000 rows of blood markers for 20 people. Aim is to create simple plots and create summary statistics (mean, standard deviations, etc)
+> 4. A dataset of 10k rows of genetic sequencing data. Aim is to pattern-match and extract key sequences
+> 5. The dataset in example 1, but instead of a single file, you have 100 similar files, i.e. you wish to create 100 plots
+> 
+> > #### Solution
+> > 1. Yes
+> > 2. Probably not
+> > 3. Yes
+> > 4. Probably not
+> > 5. Probably not
+> > 
+> {: .solution}
 {: .challenge}
