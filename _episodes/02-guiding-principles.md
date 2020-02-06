@@ -18,6 +18,8 @@ Raw data is that which is untouched. It is the file that comes from the instrume
 entered. It does not contain formatting, italics, bold titles, calculations or plots. This is the point at which you start, and to which you should always
 be able to return. Make backups, protect it at all costs, and as soon as you start to work on it, save your consequent work as a new file.
 
+If you ever ask someone for their raw data and receive a file that looks like the following, you now know better!
+
 ![alt text](../fig/01-poor_raw_data.png "What raw data does *not* look like")
 
 
@@ -27,6 +29,8 @@ Meta-data, or 'data about data', is an essential piece of any project that wishe
 projects using basic project organisation principles, such as having a README.txt file explaining details of the file. One way of improving the 
 reproducibility of a spreadsheet file is to have a tab or separate spreadsheet file that contains variable names and associated details. For example,
 it may list all variable names, their units, maximum and minimum values, internet references to find out more, etc.
+
+An example data dictionary,
 
 ![alt text](../fig/02-data-dictionary.png "A simple data dictionary example")
 
@@ -45,6 +49,8 @@ would be 'CRP_mg.ml', avoiding characters like brackets and slashes.
 
 Never underestimate the importance of everyone being on the same page with units. In 1999, NASA and Lockheed Martin used different units on the same 
 aspect of a particular project, leading to the [destruction of the $125 million Mars Climate Orbiter](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter).
+
+Below is an example of some poor variable/column names,
 
 ![alt text](../fig/03-poor-names.png "Poor variable names")
 
@@ -84,6 +90,8 @@ have to split the column. It's far easier to use two different columns from the 
 Merging cells is a similar issue. Merging multiple cells into a single cell may look good, but it does nothing for subsequent processing. For example,
 as soon as you save your file as a CSV, the merging is lost and you end up with an empty cell.
 
+Below is an example of a poor use of columns,
+
 ![alt text](../fig/04-poor-columns.png "Poor use of columns")
 
 
@@ -95,6 +103,8 @@ is not only easy to understand by eye, it's also easy for other programs to load
 If your data contains multiple parts, each of which is or can be structured in the form of a rectangle, consider putting each into its own tab, or even
 better, each into a separate file. The latter may seem overly complicated, and may not always be necessary, but recall that CSV files cannot save
 multiple tabs.
+
+Below is an example of non-rectangular data,
 
 ![alt text](../fig/05-non_rectangular.png "Non-rectangular data")
 
@@ -109,6 +119,8 @@ as much information as a clear label. Nor can you export the colour details via 
 It is far more useful to create new columns that contain the details of whatever information you are conveying with colour. For example, rather than
 using colours to highlight 'high' and 'low' values of some numeric column, instead create a column called, say, 'Value category', with the values
 of 'high', 'low' and 'normal' in the cells.
+
+Below is an example of poor colour-use,
 
 ![alt text](../fig/06-poor-colour.png "Colour overload")
 
